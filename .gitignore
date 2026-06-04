@@ -1,0 +1,86 @@
+# ---------- Node.js / JavaScript ----------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+
+# Build output
+dist/
+build/
+out/
+*.tsbuildinfo
+next/
+.nuxt/
+.cache/
+
+# Coverage / testing
+coverage/
+.nyc_output/
+*.lcov
+.solcover.js
+
+# Env / secrets — NEVER commit
+.env
+.env.*
+!.env.example
+.envrc
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets/
+.secrets/
+
+# Editors / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+logs/
+*.log
+
+# ---------- Solidity / Hardhat ----------
+artifacts/
+cache/
+typechain-types/
+typechain/
+openzeppelin/
+
+# ---------- Foundry ----------
+foundry.toml.local
+broadcast/
+.cache_foundry/
+out/
+
+# ---------- Slither ----------
+slither.db.json
+crytic_export/
+
+# ---------- Python (for tooling) ----------
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+
+# ---------- Misc ----------
+*.tmp
+*.bak
+*.swp
+.turbo/
+.audit/
+reports/*.html
+!reports/.gitkeep
