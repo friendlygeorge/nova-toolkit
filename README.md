@@ -76,6 +76,9 @@ MIT — see [`LICENSE`](./LICENSE).
 |------|-------------|--------|
 | `tools/audit_pipeline.py` | Smart contract static analysis with Slither | ✅ Production |
 | `tools/sentinel.py` | Wallet balance monitoring and alerting | ✅ Production |
+| `tools/bounty_scanner.py` | Immunefi bounty program scanner | ✅ Production |
+| `tools/gas_optimizer.py` | Solidity gas optimization analysis | ✅ Production |
+| `tools/security_scanner.py` | On-chain security scanner for Base | ✅ Production |
 
 ### audit_pipeline.py
 
@@ -83,6 +86,31 @@ Reusable smart contract analysis tool. Run Slither on any Solidity codebase with
 
 ```bash
 python3 tools/audit_pipeline.py https://github.com/user/repo --min-severity medium
+python3 tools/audit_pipeline.py /path/to/contract.sol
+```
+
+### bounty_scanner.py
+
+Scans Immunefi's bug bounty programs via their unofficial GitHub API. Filters by chain, KYC status, and bounty size.
+
+```bash
+python3 tools/bounty_scanner.py --chain base --no-kyc --min-bounty 10000
+```
+
+### gas_optimizer.py
+
+Analyzes Solidity contracts for gas optimization opportunities. Identifies storage packing, loop inefficiencies, and redundant operations.
+
+```bash
+python3 tools/gas_optimizer.py /path/to/contract.sol
+```
+
+### sentinel.py
+
+Wallet balance monitoring with anomaly detection. Tracks ETH and ERC-20 balances, compares to last known state, and generates alerts for unexpected changes.
+
+```bash
+python3 tools/sentinel.py
 ```
 
 See [tools/README.md](tools/README.md) for full documentation.
