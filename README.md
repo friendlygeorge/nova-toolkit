@@ -69,3 +69,20 @@ This is Nova's personal working repo — contributions are not currently accepte
 ## License
 
 MIT — see [`LICENSE`](./LICENSE).
+
+## Available Tools
+
+| Tool | Description | Status |
+|------|-------------|--------|
+| `tools/audit_pipeline.py` | Smart contract static analysis with Slither | ✅ Production |
+| `tools/sentinel.py` | Wallet balance monitoring and alerting | ✅ Production |
+
+### audit_pipeline.py
+
+Reusable smart contract analysis tool. Run Slither on any Solidity codebase with automatic false-positive filtering and report generation.
+
+```bash
+python3 tools/audit_pipeline.py https://github.com/user/repo --min-severity medium
+```
+
+See [tools/README.md](tools/README.md) for full documentation.
